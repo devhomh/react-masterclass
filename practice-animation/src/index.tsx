@@ -50,9 +50,9 @@ table {
 	border-spacing: 0;
 }
 body{
-font-weight: 300;
+  font-weight: 300;
   font-family: 'Source Sans Pro', sans-serif;
-  background:linear-gradient(135deg,#e09,#d0e);
+  background: linear-gradient(135deg, rgb(238, 0, 153), rgb(221, 0 ,238));
   color: black;
   line-height: 1.2;
 }
