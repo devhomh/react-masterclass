@@ -1,4 +1,5 @@
 import ReactDOM from "react-dom/client";
+import { QueryClient, QueryClientProvider } from "react-query";
 import { RecoilRoot } from "recoil";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import App from "./App";
@@ -35,9 +36,6 @@ footer, header, hgroup, main, menu, nav, section {
 *[hidden] {
     display: none;
 }
-body {
-  line-height: 1;
-}
 menu, ol, ul {
   list-style: none;
 }
@@ -54,29 +52,39 @@ table {
   border-spacing: 0;
 }
 * {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
   box-sizing: border-box;
 }
 body {
   font-weight: 300;
   font-family: 'Source Sans Pro', sans-serif;
-  color:black;
-  line-height: 1.2;
-  
+  color: ${(props) => props.theme.white.darker};
+  line-height: 1.2; 
+  background-color: black;
 }
 a {
   text-decoration:none;
   color:inherit;
 }
+
+::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
 `;
+
+const client = new QueryClient();
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <RecoilRoot>
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <App />
-    </ThemeProvider>
+    <QueryClientProvider client={client}>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <App />
+      </ThemeProvider>
+    </QueryClientProvider>
   </RecoilRoot>
 );
