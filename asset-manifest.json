@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/react-masterclass/cryptocoin/static/js/main.9c6d6b96.js",
-    "index.html": "/react-masterclass/cryptocoin/index.html",
-    "main.9c6d6b96.js.map": "/react-masterclass/cryptocoin/static/js/main.9c6d6b96.js.map"
+    "main.js": "/react-masterclass/static/js/main.1546c994.js",
+    "index.html": "/react-masterclass/index.html",
+    "main.1546c994.js.map": "/react-masterclass/static/js/main.1546c994.js.map"
   },
   "entrypoints": [
-    "static/js/main.9c6d6b96.js"
+    "static/js/main.1546c994.js"
   ]
 }
